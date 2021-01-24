@@ -1,12 +1,22 @@
-<html>
-    <body>
-        <form method="post" data-netlify="true" name="contact">
-            <label>Voornaam</label>
-            <input type="text" name="voornaam">
-            <Label>Achternaam</Label>
-            <input type="text" name="achternaam"
-            <input type="submit" value="Verstuur">
-            <br>
-    </form>
-    </body>
-</html>   
+<form method="post" data-netlify="true" name="wedstrijddata">
+    <label>Naam thuisploeg</label>
+    <input type="text" name="thuisploeg" style="margin-right: 20px;">
+    <label>Naam gastploeg</label>
+    <input type="text" name="gastploeg">
+    <label>Score thuisploeg</label>
+    <input type="number" name="score thuisploeg" style="margin-right: 20px;">
+    <label>Score gastploeg</label>
+    <input type="number" name="score gastploeg">
+    <label>Datum wedstrijd</label>
+    <input type="date" name="datum wedstrijd">
+    <label>Klasse</label>
+    <select name="klasses">
+      <option value="Elite">Eerste klasse A</option>
+      <option value="Interprovinciaal">Eerste klasse B</option>
+      <option value="Provinciaal">Eerste nationale</option>
+      <option value="Gewestelijk">Tweede afdeling VV A</option>
+    </select>
+    <label>Oefenwedstrijd?</label>
+    <input type="checkbox" name="oefenwedstrijd" id="Checkbox">
+    <input type="submit" value="Verstuur" style="margin-left: 50px;">
+  </form>
