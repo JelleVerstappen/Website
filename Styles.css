@@ -1,0 +1,31 @@
+.Titels {
+    font-family:calibri;
+    font-size:25px;
+    margin-left: 5px;
+  }
+  .Intro {
+    font-family:calibri;
+    font-size: 23px;
+    margin-left: 5px;
+  }
+  .Teksten {
+    margin-left:30px;
+    font-size: 20px;
+    font-family:calibri;
+  }
+  .Images {
+    width: 15%;
+    height: 30%;
+    margin-left:30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: radius 2px;
+}
+    .Footer {
+      margin-left: 10px;
+      position: fixed;
+      left: 0;
+      background-color: ghostwhite;
+      width: 100%;
+      text-align: center;
+}
