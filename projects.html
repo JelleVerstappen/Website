@@ -14,10 +14,128 @@
 
     <div class="Titels">
         <h1>Deel opdracht 1 & 2</h1>
+        <code language-csharp>
+            void Layers() {  // maak sub-programma Layers aan
+                for (int i = 0; i < 16; i++)
+                {
+                  digitalWrite(Column[i], 0);  // Stuur alle kolommen laag d.m.v. een for-loop
+                }
+                for (int j = 0; j < 4; j++) {
+                  digitalWrite(Layer[j], 1);  // Stuur de lagen een voor een hoog, d.m.v. een for-loop
+                  delay(100);  // wacht 100ms
+
+                  void ColumnsOnOff(){  // maak sub-programma ColumnsOnOff aan
+                    int x = 75; // stel getal x gelijk aan 75
+                    TurnOff(); // roep TurnOff op
+                    //turn on layers
+                    for (int i = 0; i < 4; i++) // maak een for-loop met i waarbij i kleiner blijft dan 4 en telkens wordt opgeteld met 1
+                    {
+                      digitalWrite(Layer[i], 1); // zet layer i hoog
+                    }
+                    for (int y = 0; y < 2; y++) // deze for-loop is puur om het volgende 3x uit te voeren
+                    {
+                      //turn on 0-3
+                      for (int i = 0; i < 4; i++) // maak een for-loop aan voor Columns 0-3 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet Column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 4-7
+                      for (int i = 4; i < 8; i++) // maak een for-loop aan voor Columns 4-7 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet Column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 8-11
+                      for (int i = 8; i < 12; i++) // maak een for-loop aan voor Columns 8-11 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet Column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 12-15
+                      for (int i = 12; i < 16; i++) // maak een for-loop aan voor Columns 12-15 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet Column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 0-3
+                      for (int i = 0; i < 4; i++) // maak een for-loop aan voor Columns 0-3 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 4-7
+                      for (int i = 4; i < 8; i++) // maak een for-loop aan voor Columns 4-7 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 8-11
+                      for (int i = 8; i < 12; i++) // maak een for-loop aan voor Columns 8-11 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 12-15
+                      for (int i = 12; i < 16; i++) // maak een for-loop aan voor Columns 12-15 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 12-15
+                      for (int i = 12; i < 16; i++) // maak een for-loop aan voor Columns 12-15 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 8-11
+                      for (int i = 8; i < 12; i++) // maak een for-loop aan voor Columns 8-11 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 4-7
+                      for (int i = 4; i < 8; i++) // maak een for-loop aan voor Columns 4-7 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn on 0-3
+                      for (int i = 0; i < 4; i++) // maak een for-loop aan voor Columns 0-3 hoog te sturen
+                      {
+                        digitalWrite(Column[i], 0); // zet column i laag
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 12-15
+                      for (int i = 12; i < 16; i++) // maak een for-loop aan voor Columns 12-15 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 8-11
+                      for (int i = 8; i < 12; i++) // maak een for-loop aan voor Columns 8-11 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 4-7
+                      for (int i = 4; i < 8; i++) // maak een for-loop aan voor Columns 4-7 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                      //turn off 0-3
+                      for (int i = 0; i < 4; i++) // maak een for-loop aan voor Columns 0-3 laag te sturen
+                      {
+                        digitalWrite(Column[i], 1); // zet column i hoog
+                        delay(x); // wacht x ms
+                      }
+                    }
+                  }
+        </code>
     </div>
     
         <h2 style="font-family: calibri; margin-left: 5px">Volledig programma</h2>
-        <a href="C:\Users\VeJe071104\OneDrive - MOSA-RT\2020-2021\Projecten\LED cube\Project_LEDcube" download>Programma</a>
     
 </body>
 </head>
