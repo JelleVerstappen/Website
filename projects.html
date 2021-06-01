@@ -17,7 +17,9 @@
     <div class="Titels">
         <h2>Deel opdracht 1 & 2</h2>
         </div>
+        <div class="Teksten">
         <p>Bij de 1ste en het 2de programma heb ik de layers één voor één, op en neer laten gaan en kolommen heen en weer.</p>
+        </div>
         <pre>
         <code language-csharp>
             void Layers() {  // maak sub-programma Layers aan
@@ -144,7 +146,9 @@
       <div class="Titels">
         <h2>Deelopdracht 3 & 4</h2>
         </div>
+        <div class="Teksten">
         <p>Bij het 3de en 4de programma heb ik elke LED appart aangestuurd, en zodra ik helemaal onder was, terug naar boven gegaan.</p>
+        </div>
         <pre>
           <code language-csharp>
             void OneByOneUpDown(){  // maak sub-programma OneByOneUpDown aan
@@ -317,6 +321,55 @@
             }
           </code>
         </pre>
+        <div class="Titels">
+          <h2>Deel opdracht 5</h2>
+          </div>
+          <div class="Teksten">
+          <p>De 5de opdracht is in principe hetzelfde als opdracht 4, maar nu wordt er telkens een willekeurige LED aangestuurt.</p>
+          </div>
+          <pre>
+          <code language-csharp>
+            void OneByOneRandom(){  // maak sub-programma OneByOneRandom aan
+              TurnOff(); // roep TurnOff op
+              int x = 10; // stel getal x gelijk aan 10
+              for (int i = 0; i != 750; i += 2) // maak een for-loop aan waarbij i een startwaarde van 0 heeft en nooit 750 mag worden, en wordt telkens met 2 opgeteld
+              {
+                int RandomLayer = random(0, 4); // variabele RandomLayer kiest een random getal tussen 0 en 4
+                int RandomColumn = random(0, 16); // variabele RandomColumn kiest een random getal tussen 0 en 16
+            
+                digitalWrite(Layer[RandomLayer], 1); // stuur RandomLayer hoog
+                digitalWrite(Column[RandomColumn], 0); // stuur RandomColumn laag
+                delay(x); // wacht x ms
+                digitalWrite(Layer[RandomLayer], 0); // stuur RandomLayer laag
+                digitalWrite(Column[RandomColumn], 1); // stuur RandomColumn hoog
+                delay(x); // wacht x ms
+              }
+            }
+          </code>
+          </pre>
+          <div class="Teksten">
+            <p>Opdracht 6 is een 'Raindrop'-effect, dit wil zeggen dat je bij een willekeurige LED bovenaan start en vanuit die lijn laag per laag naar onder gaat</p>
+            </div>
+            <pre>
+            <code class="language-csharp">
+              void OneByOneRandom(){  // maak sub-programma OneByOneRandom aan
+                TurnOff(); // roep TurnOff op
+                int x = 10; // stel getal x gelijk aan 10
+                for (int i = 0; i != 750; i += 2) // maak een for-loop aan waarbij i een startwaarde van 0 heeft en nooit 750 mag worden, en wordt telkens met 2 opgeteld
+                {
+                  int RandomLayer = random(0, 4); // variabele RandomLayer kiest een random getal tussen 0 en 4
+                  int RandomColumn = random(0, 16); // variabele RandomColumn kiest een random getal tussen 0 en 16
+              
+                  digitalWrite(Layer[RandomLayer], 1); // stuur RandomLayer hoog
+                  digitalWrite(Column[RandomColumn], 0); // stuur RandomColumn laag
+                  delay(x); // wacht x ms
+                  digitalWrite(Layer[RandomLayer], 0); // stuur RandomLayer laag
+                  digitalWrite(Column[RandomColumn], 1); // stuur RandomColumn hoog
+                  delay(x); // wacht x ms
+                }
+              }
+              </code>
+              </pre>
         <h2 style="font-family: calibri; margin-left: 5px">Volledig programma</h2>
     
 </body>
