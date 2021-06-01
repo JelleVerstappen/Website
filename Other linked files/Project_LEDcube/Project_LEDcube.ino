@@ -18,22 +18,22 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-  //LayerOneByOne();  // voer LayerOneByOne uit
-  //Layers();  // voer Layers uit
-  //TurnOffLayers();  // voer TurnOffLayers uit
-  //delay(20);  // wacht 100ms
-  //FlickerFaster();  // voer FlickerFaster uit
-  //delay(50);  // wacht 20ms
-  //ColumnsOff();  // voer ColumnsOff uit
-  //delay(200);  // wacht 200ms
+  LayerOneByOne();  // voer LayerOneByOne uit
+  Layers();  // voer Layers uit
+  TurnOffLayers();  // voer TurnOffLayers uit
+  delay(20);  // wacht 100ms
+  FlickerFaster();  // voer FlickerFaster uit
+  delay(50);  // wacht 20ms
+  ColumnsOff();  // voer ColumnsOff uit
+  delay(200);  // wacht 200ms
   ColumnsOnOff();  // voer ColumnsOnOff uit
-  //delay(200);  // wacht 200ms
-  //OneByOneUpDown();  // voer OneByOneUpDown uit
-  //delay(200);  // wacht 200ms
-  //RandomRain();  // voer RandomRain uit
-  //delay(200);  // wacht 200ms
-  //OneByOneRandom();  // voer OneByOneRandom uit
-  //delay(10000);  // wacht 100000ms
+  delay(200);  // wacht 200ms
+  OneByOneUpDown();  // voer OneByOneUpDown uit
+  delay(200);  // wacht 200ms
+  RandomRain();  // voer RandomRain uit
+  delay(200);  // wacht 200ms
+  OneByOneRandom();  // voer OneByOneRandom uit
+  delay(10000);  // wacht 100000ms
   // einde programma
 }
 
