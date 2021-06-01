@@ -351,7 +351,7 @@
             <p>Opdracht 6 is een 'Raindrop'-effect, dit wil zeggen dat je bij een willekeurige LED bovenaan start en vanuit die lijn laag per laag naar onder gaat</p>
             </div>
             <pre>
-            <code class="language-csharp">
+            <code language-csharp>
               void RandomRain(){  // maak sub-programma RandomRain aan
                 TurnOff(); // roep TurnOff op
                 int x = 100; // stel getal x gelijk aan 100
@@ -376,7 +376,29 @@
               }
               </code>
               </pre>
+              <div class="Teksten">
+                <p>En voor de laatste opdracht zijn alle LEDs tegelijkertijd flikkeren, maar de vertraging tussen aan en uit wordt elke keer kleiner hierdoor krijg je na bepaalde tijd het gevoel alsof ze constant branden.</p>
+                </div>
+                <pre>
+                <code language-csharp>
+                  void FlickerFaster() {  // maak sub-programma FlickerFaster aan
+                    int i = 150; // stel getal i gelijk aan 150
+                    while (i != 1) // wanneer i niet 1 is:
+                    {
+                      TurnOn(); // roep TurnOn op
+                      delay(i); // wacht met waarde i
+                      TurnOff(); // roep TurnOff op
+                      delay(i); // wacht weer met waarde i
+                      i -= 5; // er wordt 5 van i afgetrokken voor elke loop
+                      if (i <= 5) { // als i kleiner of gelijk aan 5 is:
+                        i = 1; // wordt i gelijkgesteld aan 1 om uit de while-loop te komen
+                      }
+                    }
+                  }
+                </code>
+              </pre>
         <h2 style="font-family: calibri; margin-left: 5px">Volledig programma</h2>
+        
     
 </body>
 </head>
