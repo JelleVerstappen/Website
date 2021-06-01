@@ -352,20 +352,26 @@
             </div>
             <pre>
             <code class="language-csharp">
-              void OneByOneRandom(){  // maak sub-programma OneByOneRandom aan
+              void RandomRain(){  // maak sub-programma RandomRain aan
                 TurnOff(); // roep TurnOff op
-                int x = 10; // stel getal x gelijk aan 10
-                for (int i = 0; i != 750; i += 2) // maak een for-loop aan waarbij i een startwaarde van 0 heeft en nooit 750 mag worden, en wordt telkens met 2 opgeteld
+                int x = 100; // stel getal x gelijk aan 100
+                for (int i = 0; i != 60; i += 2) // maak een for-loop aan waarbij i elke keer met 2 wordt opgeteld en i niet gelijk mag zijn aan 60
                 {
-                  int RandomLayer = random(0, 4); // variabele RandomLayer kiest een random getal tussen 0 en 4
-                  int RandomColumn = random(0, 16); // variabele RandomColumn kiest een random getal tussen 0 en 16
-              
-                  digitalWrite(Layer[RandomLayer], 1); // stuur RandomLayer hoog
-                  digitalWrite(Column[RandomColumn], 0); // stuur RandomColumn laag
+                  int randomColumn = random(0, 16); // de variabele RandomColumn is gelijk aan een random getal tussen 0 en 16
+                  digitalWrite(Column[randomColumn], 0); // zet RandomColumn laag
+                  digitalWrite(Layer[0], 1); // zet de eerste layer hoog
+                  delay(x + 50); // wacht x+50 ms
+                  digitalWrite(Layer[0], 0); // zet layer 1 laag
+                  digitalWrite(Layer[1], 1); // zet layer 2 hoog
                   delay(x); // wacht x ms
-                  digitalWrite(Layer[RandomLayer], 0); // stuur RandomLayer laag
-                  digitalWrite(Column[RandomColumn], 1); // stuur RandomColumn hoog
+                  digitalWrite(Layer[1], 0); // zet layer 2 laag
+                  digitalWrite(Layer[2], 1); // zet layer 3 hoog
                   delay(x); // wacht x ms
+                  digitalWrite(Layer[2], 0); // zet layer 3 laag
+                  digitalWrite(Layer[3], 1); // zet layer 4 hoog
+                  delay(x + 50); // wacht x + 50 ms
+                  digitalWrite(Layer[3], 0); // zet layer 4 laag
+                  digitalWrite(Column[randomColumn], 1); // zet randomColumn hoog
                 }
               }
               </code>
